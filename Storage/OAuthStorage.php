@@ -120,6 +120,11 @@ class OAuthStorage implements IOAuth2RefreshTokens, IOAuth2GrantUser, IOAuth2Gra
 
         return in_array($grant_type, $client->getAllowedGrantTypes(), true);
     }
+	
+	public function markAuthCodeAsUsed($code)
+	{
+	
+	}
 
     public function checkUserCredentials(IOAuth2Client $client, $username, $password)
     {
